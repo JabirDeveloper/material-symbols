@@ -1,3 +1,4 @@
+import { Symbols } from "@/lib";
 import Image from "next/image";
 
 export default function Home() {
@@ -38,6 +39,16 @@ export default function Home() {
           priority
         />
       </div>
+
+      <Symbols
+        variants="sharp"
+        grade="high"
+        opticalSize={24}
+        weight="light"
+        className="text-red-400 text-3xl"
+      >
+        home
+      </Symbols>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <a
