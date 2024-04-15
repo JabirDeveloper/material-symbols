@@ -41,12 +41,20 @@ export default function Home() {
       </div>
 
       <Symbols
+        filled
         variants="sharp"
         grade="high"
         opticalSize={24}
         weight="light"
-        className="text-red-400 text-3xl"
       >
+        home
+      </Symbols>
+
+      <Symbols variants="outlined" grade="low" opticalSize={24} weight="medium">
+        home
+      </Symbols>
+
+      <Symbols variants="rounded" grade="normal" opticalSize={48}>
         home
       </Symbols>
 
