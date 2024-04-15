@@ -28,12 +28,12 @@ jobs:
         run: npm run build
 
       # Create the new release:
-      - name: Bump version & push
-        run: |
-          git config --global user.name 'Automated publish'
-          git config --global user.email 'jabirdev@users.noreply.github.com'
-          npm version patch
-          git push && git push --tags
+      # - name: Bump version & push
+      #   run: |
+      #     git config --global user.name 'Automated publish'
+      #     git config --global user.email 'jabirdev@users.noreply.github.com'
+      #     npm version patch
+      #     git push && git push --tags
 
       - name: Publish to npm
         env:
