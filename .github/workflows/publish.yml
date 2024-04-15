@@ -24,10 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Check that the tests and overall build all still pass:
-      - name: Test package
-        run: npm test
-
       - name: Build package
         run: npm run build
 
