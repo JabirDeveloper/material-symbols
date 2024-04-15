@@ -33,6 +33,8 @@ jobs:
           git config --global user.name 'Automated publish'
           git config --global user.email 'pimterry@users.noreply.github.com'
           npm version patch
+          git add .
+          git commit -m "build: new release"
           git push && git push --tags
 
       - name: Publish to npm
