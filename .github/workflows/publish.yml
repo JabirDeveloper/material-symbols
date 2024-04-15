@@ -6,16 +6,38 @@ on:
 
 jobs:
   publish:
+    name: Build, bump & publish to npm
     runs-on: ubuntu-latest
+    container: httptoolkit/act-build-base:v3.0.0
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - run: npm ci
+
       - name: Install dependencies
         run: npm install
 
+      # Check that the tests and overall build all still pass:
+      - name: Test package
+        run: npm test
+
       - name: Build package
         run: npm run build
+
+      # Create the new release:
+      - name: Bump version & push
+        run: |
+          git config --global user.name 'Automated publish'
+          git config --global user.email 'pimterry@users.noreply.github.com'
+          npm version patch
+          git push && git push --tags
 
       - name: Publish to npm
         env:
