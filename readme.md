@@ -4,13 +4,17 @@ This is just a simple library to use Material Symbols in your React project. You
 
 # Installation
 
-`npm i @jabirdeveloper/material-symbols`
+```c
+npm i @jabirdeveloper/material-symbols
+```
 
 # Usage
 
 Import in CSS (example: index.css in Vite):
 
-`@import "material-symbols";`
+```css
+@import "material-symbols";
+```
 
 Component Symbol props:
 
