@@ -1,6 +1,6 @@
 # Material Symbols for React Project
 
-This is just a simple library to use Material Symbols in your React library. You can learn more about Material Symbols from this link: [https://fonts.google.com/icons.](https://fonts.google.com/icons.) This library also includes other libraries namely: [material-symbols](https://www.npmjs.com/package/material-symbols), [clsx](https://www.npmjs.com/package/clsx), and [tailwind-merge](https://www.npmjs.com/package/tailwind-merge).
+This is just a simple library to use Material Symbols in your React project. You can learn more about Material Symbols from this link: [https://fonts.google.com/icons.](https://fonts.google.com/icons.) This library also includes other libraries namely: [material-symbols](https://www.npmjs.com/package/material-symbols), [clsx](https://www.npmjs.com/package/clsx), and [tailwind-merge](https://www.npmjs.com/package/tailwind-merge).
 
 # Installation
 
