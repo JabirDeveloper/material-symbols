@@ -1,6 +1,6 @@
 "use client";
 
-import "./styles.css";
+import "material-symbols";
 import { FC, PropsWithChildren } from "react";
 import { cn, getGrade, getWeight } from "./utils";
 
