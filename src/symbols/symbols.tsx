@@ -4,7 +4,7 @@ import "material-symbols";
 import { FC, PropsWithChildren } from "react";
 import { cn, getGrade, getWeight } from "./utils";
 
-interface MaterialSymbolProps extends PropsWithChildren {
+interface SymbolsProps extends PropsWithChildren {
   filled?: boolean;
   variants?: "outlined" | "rounded" | "sharp";
   opticalSize?: 20 | 24 | 40 | 48;
@@ -20,14 +20,14 @@ interface MaterialSymbolProps extends PropsWithChildren {
   className?: string | undefined;
 }
 
-const MaterialSymbol: FC<MaterialSymbolProps> = ({
+const Symbols: FC<SymbolsProps> = ({
   filled = false,
   variants = "outlined",
   weight,
   opticalSize,
   grade,
   children,
-  className,
+  className
 }) => {
   const wght = getWeight(weight || "normal");
   const grd = getGrade(grade || "normal");
@@ -44,4 +44,4 @@ const MaterialSymbol: FC<MaterialSymbolProps> = ({
   );
 };
 
-export default MaterialSymbol;
+export default Symbols;
