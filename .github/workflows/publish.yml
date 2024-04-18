@@ -27,15 +27,15 @@ jobs:
       - name: Build package
         run: npm run build
 
-      # Create the new release:
-      - name: Bump version & push
-        run: |
-          git config --global user.name 'Automated publish'
-          git config --global user.email 'jabirdeveloper@users.noreply.github.com'
-          npm version patch
-          git push && git push --tags
-
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npm publish --access public
+
+      # Create the new release:
+      # - name: Bump version & push
+      #   run: |
+      #     git config --global user.name 'Automated publish'
+      #     git config --global user.email 'jabirdeveloper@users.noreply.github.com'
+      #     npm version patch
+      #     git push && git push --tags
