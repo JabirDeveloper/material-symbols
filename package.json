@@ -1,6 +1,6 @@
 {
   "name": "@jabirdeveloper/material-symbols",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -38,7 +38,7 @@
   "description": "Material Symbols for React component",
   "peerDependencies": {
     "clsx": "^2.1.0",
-    "material-symbols": "^0.17.2",
+    "material-symbols": "latest",
     "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
