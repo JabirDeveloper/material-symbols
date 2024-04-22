@@ -16,6 +16,7 @@ interface SymbolsProps extends PropsWithChildren {
     | "semi_bold"
     | "bold";
   grade?: "low" | "normal" | "high";
+  fontSize?: "md" | "sm" | "lg" | "xl" | "base";
   className?: string | undefined;
 }
 
@@ -25,6 +26,7 @@ const Symbols: FC<SymbolsProps> = ({
   weight,
   opticalSize,
   grade,
+  fontSize = "base",
   children,
   className
 }) => {
@@ -36,7 +38,10 @@ const Symbols: FC<SymbolsProps> = ({
   return (
     <span
       style={{ fontVariationSettings: styles }}
-      className={cn(`material-symbols-${variants} `, className)}
+      className={cn(
+        `material-symbols-${variants} text-${fontSize}  `,
+        className
+      )}
     >
       {children}
     </span>

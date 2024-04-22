@@ -18,7 +18,7 @@ Import in CSS (example: index.css in Vite):
 
 Component Symbol props:
 
-<table><tbody><tr><td>filled</td><td>boolean</td></tr><tr><td>variants</td><td>outlined | rounded | sharp</td></tr><tr><td>opticalSize</td><td>20 | 24 | 40 | 48</td></tr><tr><td>weight</td><td>thin | extra_light | &nbsp;light | normal | medium | semi_bold | bold</td></tr><tr><td>grade</td><td>low | normal | high</td></tr><tr><td>className</td><td>string</td></tr></tbody></table>
+<table><tbody><tr><td>filled</td><td>boolean</td></tr><tr><td>variants</td><td>outlined | rounded | sharp</td></tr><tr><td>opticalSize</td><td>20 | 24 | 40 | 48</td></tr><tr><td>weight</td><td>thin | extra_light | &nbsp;light | normal | medium | semi_bold | bold</td></tr><tr><td>grade</td><td>low | normal | high</td></tr><tr><td>className</td><td>string</td></tr><tr><td>fontSize</td><td>md | sm | lg | xl | base</td></tr></tbody></table>
 
 Example code to display icon:
 
