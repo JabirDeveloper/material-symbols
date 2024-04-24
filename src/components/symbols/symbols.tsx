@@ -1,9 +1,9 @@
 "use client";
 
-import { FC, PropsWithChildren } from "react";
+import { FC, HTMLAttributes, PropsWithChildren } from "react";
 import { cn, getGrade, getWeight } from "./utils";
 
-interface SymbolsProps extends PropsWithChildren {
+interface SymbolsProps extends HTMLAttributes<HTMLSpanElement> {
   filled?: boolean;
   variants?: "outlined" | "rounded" | "sharp";
   opticalSize?: 20 | 24 | 40 | 48;
@@ -17,10 +17,9 @@ interface SymbolsProps extends PropsWithChildren {
     | "bold";
   grade?: "low" | "normal" | "high";
   fontSize?: "md" | "sm" | "lg" | "xl" | "base";
-  className?: string | undefined;
 }
 
-const Symbols: FC<SymbolsProps> = ({
+const Symbols: FC<PropsWithChildren<SymbolsProps>> = ({
   filled = false,
   variants = "outlined",
   weight,
@@ -28,7 +27,8 @@ const Symbols: FC<SymbolsProps> = ({
   grade,
   fontSize = "base",
   children,
-  className
+  className,
+  ...rest
 }) => {
   const wght = getWeight(weight || "normal");
   const grd = getGrade(grade || "normal");
@@ -37,6 +37,7 @@ const Symbols: FC<SymbolsProps> = ({
   }, 'wght' ${wght}, 'GRAD' ${grd}, 'opsz' ${opticalSize ?? 24}`;
   return (
     <span
+      {...rest}
       style={{ fontVariationSettings: styles }}
       className={cn(
         `material-symbols-${variants} text-${fontSize}  `,
