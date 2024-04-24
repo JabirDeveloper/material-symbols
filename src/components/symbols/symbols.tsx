@@ -25,7 +25,7 @@ const Symbols: FC<PropsWithChildren<SymbolsProps>> = ({
   weight,
   opticalSize,
   grade,
-  fontSize = "inherit",
+  fontSize = "base",
   children,
   className,
   ...rest
