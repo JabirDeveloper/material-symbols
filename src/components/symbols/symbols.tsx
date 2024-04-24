@@ -16,7 +16,7 @@ interface SymbolsProps extends HTMLAttributes<HTMLSpanElement> {
     | "semi_bold"
     | "bold";
   grade?: "low" | "normal" | "high";
-  fontSize?: "md" | "sm" | "lg" | "xl" | "base";
+  fontSize?: "md" | "sm" | "lg" | "xl" | "base" | "inherit" | "2xl" | "3xl";
 }
 
 const Symbols: FC<PropsWithChildren<SymbolsProps>> = ({
@@ -25,7 +25,7 @@ const Symbols: FC<PropsWithChildren<SymbolsProps>> = ({
   weight,
   opticalSize,
   grade,
-  fontSize = "base",
+  fontSize = "inherit",
   children,
   className,
   ...rest
