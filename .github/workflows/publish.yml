@@ -28,7 +28,7 @@ jobs:
       - run: npm ci --force
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Build package
         run: npm run build
