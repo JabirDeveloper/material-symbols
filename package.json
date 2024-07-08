@@ -1,6 +1,6 @@
 {
   "name": "@jabirdeveloper/material-symbols",
-  "version": "0.1.30",
+  "version": "0.1.31",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -8,6 +8,9 @@
   "files": [
     "/dist"
   ],
+  "repository": {
+    "url": "https://github.com/JabirDeveloper/material-symbols"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -37,9 +40,9 @@
   "license": "MIT",
   "description": "Material Symbols for React component",
   "peerDependencies": {
-    "clsx": "latest",
-    "material-symbols": "latest",
-    "tailwind-merge": "latest"
+    "clsx": "^2.1.1",
+    "material-symbols": "^0.20.0",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.2.0",
