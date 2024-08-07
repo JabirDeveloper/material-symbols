@@ -1,13 +1,14 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
+import path from "path";
 
 export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: "./setupTests.ts"
+    setupFiles: path.resolve(__dirname, "setupTests.ts")
   },
   build: {
     lib: {
