@@ -1,5 +1,3 @@
-"use client";
-
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
 import { cn, getGrade, getWeight } from "./utils";
 
@@ -39,10 +37,7 @@ const Symbols: FC<PropsWithChildren<SymbolsProps>> = ({
     <span
       {...rest}
       style={{ fontVariationSettings: styles }}
-      className={cn(
-        `material-symbols-${variants} text-${fontSize}  `,
-        className
-      )}
+      className={cn(`material-symbols-${variants} text-${fontSize}`, className)}
     >
       {children}
     </span>
