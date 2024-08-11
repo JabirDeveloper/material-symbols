@@ -15,8 +15,9 @@
     "access": "public"
   },
   "scripts": {
+    "dev": "vite",
     "test": "vitest run",
-    "test-watch": "vitest",
+    "test-watch": "vitest --watch",
     "test:ui": "vitest --ui",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",

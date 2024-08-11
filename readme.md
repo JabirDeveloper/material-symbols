@@ -5,7 +5,7 @@ This is just a simple library to use Material Symbols in your React project. You
 # Installation
 
 ```c
-npm i @jabirdeveloper/material-symbols
+npm i @jabirdev/material-symbols
 ```
 
 # Usage
@@ -24,7 +24,7 @@ Example code to display icon:
 
 ```typescript
 ...
-import { Symbols } from "@jabirdeveloper/material-symbols";
+import { Symbols } from "@jabirdev/material-symbols";
 
 function App() {
 
