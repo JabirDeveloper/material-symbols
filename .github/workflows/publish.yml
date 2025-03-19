@@ -8,7 +8,6 @@ jobs:
   publish:
     name: Build, bump & publish to npm
     runs-on: ubuntu-latest
-    container: httptoolkit/act-build-base:v3.0.0
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -18,18 +17,26 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
       - name: Clean cache
         run: bun pm cache clean
 
       - name: Remove node_modules
         run: rm -rf node_modules
 
-      - run: bun install --frozen-lockfile
+      - name: Install dependencies with Bun
+        run: bun install --frozen-lockfile
 
-      - name: Build package
-        run: bun run build
+      - name: Build package with Node.js
+        run: |
+          node ./node_modules/.bin/tsc
+          node ./node_modules/.bin/vite build
 
-      - name: Publish to npm
+      - name: Publish to npm with Bun
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: bun publish
