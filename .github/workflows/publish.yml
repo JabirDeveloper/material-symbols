@@ -25,7 +25,7 @@ jobs:
       - name: Remove node_modules
         run: rm -rf node_modules
 
-      - run: npm ci --force
+      - run: npm i --force
 
       - name: Install dependencies with legacy peer deps
         run: npm install --legacy-peer-deps
