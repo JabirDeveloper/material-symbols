@@ -20,8 +20,7 @@
     "test:ui": "vitest --ui",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
-    "build": "tsc && vite build",
-    "prepare": "husky"
+    "build": "tsc && vite build"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
