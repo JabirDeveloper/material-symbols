@@ -41,8 +41,8 @@
   "description": "Material Symbols for React component",
   "peerDependencies": {
     "clsx": "^2.1.1",
-    "material-symbols": "^0.21.3",
-    "tailwind-merge": "^2.4.0"
+    "material-symbols": "^0.29.1",
+    "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
