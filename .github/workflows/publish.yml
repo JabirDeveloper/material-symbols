@@ -13,27 +13,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: "18.x"
-          registry-url: "https://registry.npmjs.org"
+          bun-version: latest
 
       - name: Clean cache
-        run: npm cache clean --force
+        run: bun pm cache clean
 
       - name: Remove node_modules
         run: rm -rf node_modules
 
-      - run: npm ci --force
-
-      - name: Install dependencies
-        run: npm install --force
+      - run: bun install --frozen-lockfile
 
       - name: Build package
-        run: npm run build
+        run: bun run build
 
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: npm publish
+        run: bun publish
