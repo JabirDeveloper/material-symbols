@@ -1,6 +1,6 @@
 {
   "name": "@jabirdev/material-symbols",
-  "version": "0.1.43",
+  "version": "0.1.45",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -21,7 +21,8 @@
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
     "build": "tsc && vite build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "standard-version"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -40,9 +41,9 @@
   "license": "MIT",
   "description": "Material Symbols for React component",
   "peerDependencies": {
-    "clsx": "^2.1.1",
-    "material-symbols": "^0.29.1",
-    "tailwind-merge": "^3.0.2"
+    "clsx": "^2",
+    "material-symbols": "^0",
+    "tailwind-merge": "^3"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -68,6 +69,7 @@
     "prettier": "^3.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "standard-version": "^9.5.0",
     "tailwind-merge": "^3.0.2",
     "typescript": "^5.8.2",
     "vite": "^6.2.2",
