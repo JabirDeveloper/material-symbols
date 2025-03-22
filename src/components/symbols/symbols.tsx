@@ -20,24 +20,28 @@ interface SymbolsProps extends HTMLAttributes<HTMLSpanElement> {
 const Symbols: FC<PropsWithChildren<SymbolsProps>> = ({
   filled = false,
   variants = "outlined",
-  weight,
-  opticalSize,
-  grade,
+  weight = "normal",
+  opticalSize = 24,
+  grade = "normal",
   fontSize = "base",
   children,
   className,
   ...rest
 }) => {
-  const wght = getWeight(weight || "normal");
-  const grd = getGrade(grade || "normal");
-  const styles = `'FILL' ${
-    filled ? 1 : 0
-  }, 'wght' ${wght}, 'GRAD' ${grd}, 'opsz' ${opticalSize ?? 24}`;
+  // Pastikan `getWeight` dan `getGrade` selalu mengembalikan nilai yang valid
+  const wght = getWeight(weight) ?? 400; // Default weight 400 (normal)
+  const grd = getGrade(grade) ?? 0; // Default grade 0 (normal)
+
+  const styles = `'FILL' ${filled ? 1 : 0}, 'wght' ${wght}, 'GRAD' ${grd}, 'opsz' ${opticalSize}`;
+
   return (
     <span
       {...rest}
       style={{ fontVariationSettings: styles }}
-      className={cn(`material-symbols-${variants} text-${fontSize}`, className)}
+      className={cn(
+        `material-symbols-${variants} text-${fontSize}`,
+        className || ""
+      )}
     >
       {children}
     </span>
